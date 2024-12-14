@@ -1,4 +1,14 @@
+El problema probablemente se debe a un error de formato o configuración en cómo GitHub está intentando procesar el bloque de Mermaid.js en tu README.md. Vamos a corregirlo y asegurarnos de que funcione.
+
+### **Solución Corregida para README.md**
+
+Asegúrate de que estás usando las etiquetas correctas y el bloque esté estructurado de manera adecuada. Aquí está el bloque correcto:
+
+```markdown
+# Mapa Conceptual de "Logos" en Heráclito
+
 ```mermaid
+graph TD
     A[Logos] --> B[Como Razón Universal]
     A --> C[Como Palabra/Discurso]
     A --> D[Como Ley Común]
@@ -6,7 +16,7 @@
     A --> F[Crítica al Entendimiento Humano]
     A --> G[Como Sabiduría]
     A --> H[Relación con el Cambio]
-
+    
     %% Razón Universal
     B --> B1[Permanece siempre (DK 22 B1)]
     B --> B2[Todo sucede según el logos (DK 22 B31)]
@@ -43,3 +53,22 @@
     H --> H2[Logos guía el devenir (DK 22 B46)]
     H --> H3[Todo fluye hacia el logos (DK 22 B76)]
 ```
+```
+
+### **Instrucciones para GitHub:**
+1. **Guarda el archivo `README.md` con el bloque corregido.**
+2. **Verifica que esté correctamente renderizado en GitHub.** 
+   - GitHub soporta **Mermaid.js** de forma nativa en Markdown. Si ves que no se renderiza, el problema podría ser con la configuración del repositorio.
+
+### **Si sigue sin renderizarse:**
+1. **Habilitar Diagramas Mermaid en GitHub.**
+   - Ve a la configuración de tu repositorio: **Settings > Features**.
+   - Activa la opción para **Diagrams in Markdown** (Mermaid.js).
+   
+2. **Prueba en otro visor de Mermaid.**
+   - Copia el código entre las etiquetas `mermaid` y pégalo en [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/) para verificar que el diagrama se genera correctamente.
+
+3. **Asegúrate de que las etiquetas son correctas.**
+   - Usa siempre tres backticks antes y después del bloque `mermaid` en el Markdown.
+
+### **¿Qué más puedo ayudarte a verificar?** 😊
