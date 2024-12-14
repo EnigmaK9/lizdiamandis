@@ -1,3 +1,6 @@
+# Mapa Conceptual de "Logos" en Heráclito
+
+```mermaid
 graph TD
     A[Logos] --> B[Como Razón Universal]
     A --> C[Como Palabra/Discurso]
@@ -42,3 +45,4 @@ graph TD
     H --> H1[Nunca el mismo río (DK 22 B49)]
     H --> H2[Logos guía el devenir (DK 22 B46)]
     H --> H3[Todo fluye hacia el logos (DK 22 B76)]
+```
