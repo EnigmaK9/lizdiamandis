@@ -1,10 +1,3 @@
-El problema probablemente se debe a un error de formato o configuración en cómo GitHub está intentando procesar el bloque de Mermaid.js en tu README.md. Vamos a corregirlo y asegurarnos de que funcione.
-
-### **Solución Corregida para README.md**
-
-Asegúrate de que estás usando las etiquetas correctas y el bloque esté estructurado de manera adecuada. Aquí está el bloque correcto:
-
-```markdown
 # Mapa Conceptual de "Logos" en Heráclito
 
 ```mermaid
@@ -52,23 +45,24 @@ graph TD
     H --> H1[Nunca el mismo río (DK 22 B49)]
     H --> H2[Logos guía el devenir (DK 22 B46)]
     H --> H3[Todo fluye hacia el logos (DK 22 B76)]
-```
-```
+markdown
+Copy code
 
-### **Instrucciones para GitHub:**
-1. **Guarda el archivo `README.md` con el bloque corregido.**
-2. **Verifica que esté correctamente renderizado en GitHub.** 
-   - GitHub soporta **Mermaid.js** de forma nativa en Markdown. Si ves que no se renderiza, el problema podría ser con la configuración del repositorio.
+### ¿Por qué funciona?
 
-### **Si sigue sin renderizarse:**
-1. **Habilitar Diagramas Mermaid en GitHub.**
-   - Ve a la configuración de tu repositorio: **Settings > Features**.
-   - Activa la opción para **Diagrams in Markdown** (Mermaid.js).
-   
-2. **Prueba en otro visor de Mermaid.**
-   - Copia el código entre las etiquetas `mermaid` y pégalo en [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/) para verificar que el diagrama se genera correctamente.
+1. **Encabezado de diagrama**: La línea `graph TD` (Top-Down) indica a Mermaid que vas a generar un diagrama de tipo flowchart.
+2. **Bloque de código con lenguaje mermaid**: Entre las triple backticks (```) se especifica ```mermaid, lo que permite a GitHub (y otros visores Mermaid) identificar y renderizar el diagrama.
+3. **Estructura de nodos y flechas**: Cada flecha `-->` crea una relación padre-hijo en el diagrama. Los corchetes `[Texto]` se usan para mostrar el label en cada nodo.
 
-3. **Asegúrate de que las etiquetas son correctas.**
-   - Usa siempre tres backticks antes y después del bloque `mermaid` en el Markdown.
+### Pasos a seguir
 
-### **¿Qué más puedo ayudarte a verificar?** 😊
+1. **Pega tal cual** el bloque de código anterior en tu `README.md`.
+2. **Sube** ese `README.md` a GitHub o visualízalo en la vista previa en línea.  
+3. Asegúrate de que tu repositorio tenga activada la opción de renderizar Mermaid (normalmente ya viene activada por defecto en GitHub).
+
+Si hiciste todo y aún no funciona:
+- Verifica que el nombre del archivo sea `README.md` (en mayúsculas no suele haber problema, pero mejor revisarlo).
+- Revisa la pestaña **Settings** de tu repositorio, buscando alguna opción relacionada con "Diagrams" o "Mermaid".  
+- Prueba en [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/) para confirmar que el diagrama se genera sin errores. Si ahí funciona, debería funcionar en GitHub también.
+
+¡Así debería renderizarse el diagrama sin problemas!
