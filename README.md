@@ -45,8 +45,7 @@ graph TD
     H --> H1[Nunca el mismo río - DK 22 B49]
     H --> H2[El logos guía el devenir - DK 22 B46]
     H --> H3[Todo fluye hacia el logos - DK 22 B76]
-yaml
-Copy code
+
 
 ---
 
