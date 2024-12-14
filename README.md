@@ -45,22 +45,21 @@ graph TD
     H --> H1[Nunca el mismo río - DK 22 B49]
     H --> H2[El logos guía el devenir - DK 22 B46]
     H --> H3[Todo fluye hacia el logos - DK 22 B76]
-markdown
+yaml
 Copy code
 
-### Por qué funciona
-
-- **`graph TD`** especifica el tipo de diagrama (flujo Top-Down).  
-- **Eliminamos paréntesis** y símbolos que a veces generan conflictos en Mermaid.  
-- **Separación con guiones** en lugar de paréntesis hace que el parser no se confunda.  
-
-Sube este `README.md` a tu repositorio y verifica la **vista previa**. GitHub debe renderizar el diagrama de Mermaid sin errores.
+> **Importante**: Fíjate bien en dónde empieza y termina el bloque de código.  
+> - Comienza con tres backticks ``` + la palabra `mermaid`.  
+> - Finaliza con tres backticks separados (sin agregar texto después de la línea del diagrama).
 
 ---
 
-Si aun así no lo ves:
-1. Asegúrate de que el archivo se llame `README.md`.  
-2. En **Settings** del repositorio, revisa que **"Diagrams in Markdown (Mermaid)"** esté habilitado (generalmente lo está por defecto).  
-3. Verifícalo también en [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/) para confirmar que todo esté bien.
+### ¿Por qué se produce el error?
 
-¡Listo! Con esto deberías deshacerte del error de parseo.
+- **Caracteres conflictivos**: A veces los paréntesis u otros caracteres especiales dentro de los labels **rompen** el parser de Mermaid.
+- **Texto mezclado** en el mismo bloque de código: Si pones texto Markdown (`### Por qué funciona`, etc.) **dentro** del bloque `mermaid`, Mermaid intentará parsearlo como parte del diagrama.
+- **Etiqueta de código mal cerrada**: Si la línea final de triple backticks no está en una línea **aparte**, se genera un error de sintaxis.
+
+---
+
+Con este bloque **auto contenido** y limpio, deberías poder renderizar tu diagrama en GitHub sin problemas. Luego, si quieres añadir explicaciones tipo “### Por qué funciona” o “### Instrucciones”, **hazlo fuera** del bloque Mermaid.
