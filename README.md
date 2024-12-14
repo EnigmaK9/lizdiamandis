@@ -47,12 +47,3 @@ graph TD
     H --> H3[Todo fluye hacia el logos - DK 22 B76]
 
 
----
-
-**Después** de esta sección, en el mismo `README.md`, ya puedes poner tu texto adicional:
-
-```markdown
-### ¿Por qué funciona?
-- El bloque `mermaid` está limpio, sin líneas extra.
-- Se han eliminado los paréntesis conflictivos.
-- Cada label del diagrama evita caracteres especiales.
