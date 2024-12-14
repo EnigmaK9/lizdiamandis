@@ -1,7 +1,4 @@
-# Mapa Conceptual de "Logos" en Heráclito
-
 ```mermaid
-graph TD
     A[Logos] --> B[Como Razón Universal]
     A --> C[Como Palabra/Discurso]
     A --> D[Como Ley Común]
