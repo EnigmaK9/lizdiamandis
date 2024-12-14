@@ -48,18 +48,12 @@ graph TD
 yaml
 Copy code
 
-> **Importante**: Fíjate bien en dónde empieza y termina el bloque de código.  
-> - Comienza con tres backticks ``` + la palabra `mermaid`.  
-> - Finaliza con tres backticks separados (sin agregar texto después de la línea del diagrama).
-
 ---
 
-### ¿Por qué se produce el error?
+**Después** de esta sección, en el mismo `README.md`, ya puedes poner tu texto adicional:
 
-- **Caracteres conflictivos**: A veces los paréntesis u otros caracteres especiales dentro de los labels **rompen** el parser de Mermaid.
-- **Texto mezclado** en el mismo bloque de código: Si pones texto Markdown (`### Por qué funciona`, etc.) **dentro** del bloque `mermaid`, Mermaid intentará parsearlo como parte del diagrama.
-- **Etiqueta de código mal cerrada**: Si la línea final de triple backticks no está en una línea **aparte**, se genera un error de sintaxis.
-
----
-
-Con este bloque **auto contenido** y limpio, deberías poder renderizar tu diagrama en GitHub sin problemas. Luego, si quieres añadir explicaciones tipo “### Por qué funciona” o “### Instrucciones”, **hazlo fuera** del bloque Mermaid.
+```markdown
+### ¿Por qué funciona?
+- El bloque `mermaid` está limpio, sin líneas extra.
+- Se han eliminado los paréntesis conflictivos.
+- Cada label del diagrama evita caracteres especiales.
